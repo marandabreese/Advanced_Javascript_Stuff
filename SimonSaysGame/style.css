@@ -1,0 +1,58 @@
+#colors {
+    float: left;
+    overflow: hidden;
+    width: 280px;
+}
+
+#colors li {
+    background-color: palevioletred;
+    color: black;
+    cursor: auto;
+    font-size: 30px;
+    line-height: 100px;
+    list-style-position: inside;
+    list-style-type: none;
+    height: 100px;
+    float: left;
+    width: 100px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#colors li.green {
+    background-color: lightskyblue;
+}
+
+#colors li.blue {
+    background-color: plum;
+}
+
+#colors li.yellow {
+    background-color: orange;
+}
+
+#colors li.on {
+    background-color: black;
+}
+
+p#start {
+    cursor: pointer;
+    color: blue;
+}
+
+p#start:hover {
+    text-decoration: underline;
+}
+
+.playing #colors li {
+    cursor: pointer;
+}
+
+.game-over #colors li {
+    opacity: 0.5;
+}
+
+body {
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
