@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset = ISO-8859-1" http-equiv="content-type">
+
+        <script type="application/javascript">
+            function loadJSON() {
+                var data_file = 'https://catfact.ninja/fact';
+                var http_request = new XMLHttpRequest();
+                try {
+                    http_request = new XMLHttpRequest();
+                } catch (e) {
+                    try {
+                        http_request = new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                        try {
+                            http_request = new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {
+                            alert('Your browser broke!');
+                            return false;
+                        }
+                    }
+                }
+
+                http_request.onreadystatechange = function() {
+                    if (http_request.readyState == 4) {
+                        let jsonObj = JSON.parse(http_request.responseText);
+                        console.log(jsonObj);
+                        document.getElementById('activity').innerHTML = jsonObj.fact;
+                    }
+                }
+
+                http_request.open("GET", data_file, true);
+                http_request.send();
+            }
+        </script>
+        <title>Activity Finder</title>
+    </head>
+    <body>
+        <h1>Get a Cat Fact!</h1>
+        <p id="activity"></p>
+        <button type="button" onclick="loadJSON()">New Fact!</button>
+    </body>
+</html>
