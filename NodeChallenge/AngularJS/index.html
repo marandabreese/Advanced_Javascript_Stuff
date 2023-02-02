@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Challenge</title>
+    <script src="node_modules/angular/angular.js"></script>
+    <script type="module" src="js/index.js"></script>
+</head>
+<body ng-app="challenges" ng-init="testName='New User'">
+    <div ng-controller="TestCtrl">
+        <h1>Hello {{testName}}!</h1>
+        <ul>
+            <li ng-repeat="items in Menu">{{items}}</li>
+        </ul>
+        <input type="text" ng-model="testName" placeholder="Enter Your Name!">
+        <input type="submit" value="Submit">
+    </div>
+</body>
+</html>

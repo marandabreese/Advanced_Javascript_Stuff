@@ -1,0 +1,24 @@
+<div class="score-board">
+  <div class="badge" id="user-label">user : {{userSelected}}</div>
+  <div class="badge" id="comp-label">comp : {{compSelected}}</div>
+  <span id="user-score">{{userScore}}</span> : <span id="comp-score">{{compScore}}</span>
+</div>
+
+<div class="result">
+  <p *ngIf="status">{{userSelected | titlecase}} {{action}} {{compSelected | titlecase}} {{status}}</p>
+</div>
+
+<div class="choices">
+  <div class="choice" id="rock">
+    <img src="../assets/rock.png" (click)="userPick('rock')">
+  </div>
+  <div class="choice" id="paper">
+    <img src="../assets/paper.png" (click)="userPick('paper')">
+  </div>
+  <div class="choice" id="scissors">
+    <img src="../assets/scissors.png" (click)="userPick('scissors')">
+  </div>
+</div>
+
+<p class="action-message" *ngIf="!status">You Can Make Your Move</p>
+<p class="action-message" *ngIf="status">Wait...</p>

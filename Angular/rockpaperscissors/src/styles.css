@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(58, 58, 122);
+}
+
+header {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
