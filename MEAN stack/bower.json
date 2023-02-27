@@ -1,0 +1,26 @@
+{
+  "name": "mean-stack",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "marandabreese <marandabreese@cox.net>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/marandabreese/Advanced_Javascript_Stuff",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "toastr": "~2.0.2",
+    "angular": "~1.2.16",
+    "angular-resource": "~1.2.16",
+    "angular-route": "~1.2.16",
+    "bootstrap": "^5.2.3"
+  }
+}
